@@ -1,0 +1,201 @@
+<div class="wrapper d-flex align-items-stretch">
+  <nav id="sidebar" class="navbar-dark bg-dark">
+    <div class="p-4 pt-5">
+      <a
+        href="Dashboard.aspx"
+        class="img logo rounded-circle mb-5"
+        style="background-image: url(/Images/logo.png)"
+      ></a>
+      <ul class="list-unstyled components mb-5">
+        <li class="active">
+          <a
+            href="#homeSubmenu"
+            data-toggle="collapse"
+            aria-expanded="false"
+            class="dropdown-toggle"
+            >AAAT</a
+          >
+          <ul class="collapse list-unstyled" id="homeSubmenu">
+            <li>
+              <a
+                [routerLink]="['/airlines/airlines-grid']"
+                routerLinkActive="router-link-active"
+                >Airlines</a
+              >
+            </li>
+            <li>
+              <a [routerLink]="['/airports/airports-grid']">Airports</a>
+            </li>
+            <li>
+              <a [routerLink]="['/states/states-grid']">States</a>
+            </li>
+            <li>
+              <a [routerLink]="['/countries/countries-grid']">Countries</a>
+            </li>
+            <li>
+              <a [routerLink]="['/cities/cities-grid']">Cities</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="active">
+          <a
+            href="#pageSubmenu"
+            data-toggle="collapse"
+            aria-expanded="false"
+            class="dropdown-toggle"
+            >User Settings</a
+          >
+          <ul class="collapse list-unstyled" id="pageSubmenu">
+            <li>
+              <a [routerLink]="['/users/users-grid']">Users</a>
+            </li>
+            <li>
+              <a [routerLink]="['/roles/roles-grid']">Roles</a>
+            </li>
+            <li>
+              <a [routerLink]="['/modules/modules-grid']">Modules</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="active">
+          <div class="badge badge-primary">
+            Total Airports: <span id="lblTotalAirportCount">9417</span>
+          </div>
+          <div class="badge badge-secondary">
+            Total Airlines: <span id="lblTotalAirlinesCount">1741</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="content" class="">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+          <i class="fa fa-bars"></i>
+          <span class="sr-only">Toggle Menu</span>
+        </button>
+        <button
+          class="btn btn-light d-inline-block d-lg-none ml-auto"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item active">
+              &nbsp;&nbsp;&nbsp;<a [routerLink]="['/profile/profile-edit']"
+                ><span id="Label1">admin</span></a
+              >&nbsp;&nbsp;&nbsp;
+              <a class="auto-style1" id="clock">7:57:43 PM</a>
+            </li>
+            <li class="nav-item" style="width: 90px; height: 45px">
+              <a [routerLink]="['/profile/profile-edit']"
+                ><img
+                  id="ProfImg"
+                  class="ProfileImage"
+                  src="Profile_Images/abhi.png"
+                />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                ><input
+                  type="submit"
+                  name="ctl00$btnLogout"
+                  value="Log Out"
+                  id="btnLogout"
+                  class="btn btn-sm btn-danger"
+                  style="height: 43px; margin-top: 5px; margin-bottom: 8px"
+              /></a>
+            </li>
+            <li class="nav-item"></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="content" class="p-4 p-md-5">
+      <div class="container">
+        <div class="cards-list">
+          <a [routerLink]="['/airports/airports-grid']">
+            <div class="card 1">
+              <div class="card_image">
+                <img src="Images/Airports.jpg" />
+              </div>
+              <div class="card_title title-white">
+                <p>Airports</p>
+              </div>
+            </div>
+          </a>
+          <a [routerLink]="['/airlines/airlines-grid']">
+            <div class="card 2">
+              <div class="card_image">
+                <img src="Images/Airlines.jpg" />
+              </div>
+              <div class="card_title title-white">
+                <p>Airlines</p>
+              </div>
+            </div>
+          </a>
+          <a [routerLink]="['/countries/countries-grid']">
+            <div class="card 3">
+              <div class="card_image">
+                <img src="Images/Countries.jpg" />
+              </div>
+              <div class="card_title title-white">
+                <p>Countries</p>
+              </div>
+            </div>
+          </a>
+          <a [routerLink]="['/states/states-grid']">
+            <div class="card 4">
+              <div class="card_image">
+                <img src="Images/States.jpg" />
+              </div>
+              <div class="card_title title-white">
+                <p>States</p>
+              </div>
+            </div>
+          </a>
+          <a [routerLink]="['/cities/cities-grid']">
+            <div class="card 4">
+              <div class="card_image">
+                <img src="Images/Cities.jpg" />
+              </div>
+              <div class="card_title title-white">
+                <p>Cities</p>
+              </div>
+            </div>
+          </a>
+
+          <a [routerLink]="['/users/users-grid']">
+            <div class="card 4">
+              <div class="card_image">
+                <img src="Images/Users.jpg" />
+              </div>
+              <div class="card_title title-white">
+                <p>Users</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      //-----------------------------------------for not redirecting to pages after logout.----------------------------------
+
+      window.history.forward();
+    </script>
+  </div>
+</div>
